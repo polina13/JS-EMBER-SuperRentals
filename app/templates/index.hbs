@@ -11,8 +11,17 @@ We hope you find exactly what you're looking for in a place to stay.
   {{/each}}
 </ul>
 
+{{new-rental save2="save3"}}
+
+
 {{#each model.announcements as |announcement|}}
 <li>{{announcement.announcement}}</li>
   {{/each}}
 
-{{new-rental save2="save3"}}
+<form>
+  <div class="form-group">
+    <label for="announcement">New announcement:</label>
+    {{input value=announcement id="announcement"}}
+  </div>
+  <button {{action 'saveAnnouncement'}}>Save it!</button>
+</form>

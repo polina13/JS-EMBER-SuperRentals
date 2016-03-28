@@ -14,7 +14,19 @@ export default Ember.Route.extend({
     },
     save3(params) {
       var newRental = this.store.createRecord('rental', params);
+      // console.log(this);
       newRental.save();
+      this.transitionTo('index');
+      // console.log(newRental);
+    },
+    saveAnnouncement() {
+      var someVar= document.getElementById("announcement").value;
+      console.log(someVar);
+      var params = {
+        announcement: someVar
+      };
+      var newAnnouncement = this.store.createRecord('announcement', params);
+      newAnnouncement.save();
       this.transitionTo('index');
     }
   }
