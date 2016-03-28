@@ -1,0 +1,18 @@
+{{outlet}}
+We hope you find exactly what you're looking for in a place to stay.
+
+{{#link-to 'about'}}About{{/link-to}}
+{{#link-to 'announcement'}}Announcement{{/link-to}}
+{{#link-to 'contact'}}Click here to contact us.{{/link-to}}
+
+<ul>
+  {{#each model.rentals as |rental|}}
+    {{rental-tile rental=rental destroyRental = "destroyRental"}}
+  {{/each}}
+</ul>
+
+{{#each model.announcements as |announcement|}}
+<li>{{announcement.announcement}}</li>
+  {{/each}}
+
+{{new-rental save2="save3"}}
