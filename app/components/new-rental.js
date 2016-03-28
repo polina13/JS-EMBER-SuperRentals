@@ -15,6 +15,7 @@ export default Ember.Component.extend({
         type: this.get('type'),
         image: this.get('image'),
         bedrooms: this.get('bedrooms'),
+        cost: this.get('cost')
       };
       console.log(this.get('city'));
       this.set('addNewRental', false);
