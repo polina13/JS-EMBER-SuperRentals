@@ -1,0 +1,10 @@
+<h1> Welcome to {{model.name}} </h1>
+
+<h3>Rentals in {{model.name}}</h3>
+<ul>
+    {{#each model.rentals as |rental|}}
+      <li>{{rental.owner}}</li>
+    {{/each}}
+</ul>
+{{new-rental saveRental="saveRental" city=model}}
+<button {{action 'destroyCity' model}}>Delete</button>
