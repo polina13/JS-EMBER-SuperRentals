@@ -1,0 +1,13 @@
+{{yield}}
+<li>
+  {{#link-to 'rental' rental.id}}{{ rental.owner }}'s {{ rental.type }} in {{ rental.city }} - {{ rental.bedrooms }} bedrooms{{/link-to}}
+{{!--The value of isImageShowing comes from the component's JavaScript file (rental-tile.js). Since the image will be hidden at first, we will set the property to false:--}}
+  {{#if isImageShowing }}
+    <p><img src="{{rental.image}}" alt="{{rental.type}}" {{action 'imageHide'}}></p>
+{{!--Moving "action 'imageHide'" allows to hide on click of p element
+    <button action 'imageHide'>Hide Image</button>--}}
+  {{else}}
+    <button {{action 'imageShow'}}>Show Image</button>
+  {{/if}}
+
+</li>

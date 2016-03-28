@@ -1,0 +1,17 @@
+<ul>
+  {{#each model as |rental|}}
+  {{!--'rental' rightSide: component, 'rental' leftSide: model object
+To put it briefly, the rental on the left of the = refers to the variable name used within the component and the rental on the right refers to the model object we're assigning this variable to.--}}
+    {{rental-tile rental=rental destroyRental="destroyRental" update="update"}}
+  {{/each}}
+</ul>
+{{new-rental save2="save3"}}
+<hr>
+<h3>Blurb</h3>
+<p>Bacon ipsum dolor amet pork loin salami pork chop prosciutto shankle. T-bone bacon boudin, leberkas ham cupim frankfurter. Alcatra short loin turkey short ribs, tenderloin shankle tongue andouille boudin pork chop cupim. Capicola filet mignon meatloaf pork ground round tongue alcatra corned beef beef pork belly. Filet mignon t-bone turkey beef ribs. Rump short loin cow beef ribs filet mignon capicola. Bresaola biltong short loin, ball tip shankle strip steak hamburger doner tri-tip boudin.
+
+Biltong prosciutto drumstick beef. Prosciutto brisket drumstick t-bone, sausage bresaola ham hock chicken shank shoulder meatball venison filet mignon. Tri-tip drumstick pancetta pastrami capicola tongue. Beef turducken chuck boudin strip steak porchetta tail kielbasa corned beef ground round. Pork belly biltong swine bresaola jerky.</p>
+<h3>Another Blurb</h3>
+<p>Bacon ipsum dolor amet pork loin salami pork chop prosciutto shankle. T-bone bacon boudin, leberkas ham cupim frankfurter. Alcatra short loin turkey short ribs, tenderloin shankle tongue andouille boudin pork chop cupim. Capicola filet mignon meatloaf pork ground round tongue alcatra corned beef beef pork belly. Filet mignon t-bone turkey beef ribs. Rump short loin cow beef ribs filet mignon capicola. Bresaola biltong short loin, ball tip shankle strip steak hamburger doner tri-tip boudin.
+
+Biltong prosciutto drumstick beef. Prosciutto brisket drumstick t-bone, sausage bresaola ham hock chicken shank shoulder meatball venison filet mignon. Tri-tip drumstick pancetta pastrami capicola tongue. Beef turducken chuck boudin strip steak porchetta tail kielbasa corned beef ground round. Pork belly biltong swine bresaola jerky.</p>
