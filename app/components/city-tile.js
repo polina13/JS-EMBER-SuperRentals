@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-  delete(city) {
+  destroyCity(city) {
     this.sendAction('destroyCity', city);
     }
   }

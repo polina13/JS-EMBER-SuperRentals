@@ -1,3 +1,13 @@
-<h2>Read about {{model.name}} and {{model.country}}</h2>
+<h1>  Welcome to {{model.name}}</h1>
+<hr />
 
-<!-- {{city-detail city=model}} -->
+City Tile:  {{city-tile city=model destroyCity="destroyCity"}}
+
+<hr />
+{{#each model.rentals as |rental|}}
+     {{#link-to 'rental' rental.id}}<li>{{rental.owner}}</li>{{/link-to}}
+   {{/each}}
+
+New Rental Tile: {{new-rental save2="save3" city=model}}
+
+<!-- <button {{action 'destroyCity' model}}>Delete</button> -->

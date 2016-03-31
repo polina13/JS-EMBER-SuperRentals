@@ -1,6 +1,6 @@
 {{yield}}
 
-<li>{{#link-to 'rental' rental.id}}{{rental.owner}}'s {{rental.type}} in {{rental.city}} {{/link-to}}
+<li>{{#link-to 'rental' rental.id}}{{rental.owner}}'s {{rental.type}} in {{rental.city.name}} {{/link-to}}
   {{#if isImageShowing}}
     <p><img src={{rental.image}} alt={{rental.type}} {{action 'imageHide'}}></p>
   {{else}}
@@ -10,4 +10,4 @@
 
 {{update-rental rental=rental update="update"}}
 
-<button{{action 'delete' rental}}>Delete</button>
+<!-- <button{{action 'delete' rental}}>Delete</button> -->

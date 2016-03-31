@@ -1,3 +1,4 @@
 
-{{#link-to 'city' city.id}}{{city.name}} in {{city.country}} {{/link-to}}
-<button {{action 'delete' city}}>Delete Me</button>
+{{city.name}} in {{city.country}}
+
+<button {{action 'destroyCity' city}}>Delete</button>
