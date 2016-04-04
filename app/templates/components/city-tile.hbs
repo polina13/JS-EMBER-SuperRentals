@@ -1,1 +1,9 @@
-<li>{{#link-to 'city' city.id}}{{city.name}}{{/link-to}}</li>
+<h3>Rentals available in {{city.name}}:</h3>
+
+<ul>
+  {{#each sortedRentals as |rental|}}
+    {{rental-tile rental=rental}}
+  {{/each}}
+</ul>
+
+<button {{action 'delete' city}}>Delete City</button>

@@ -6,11 +6,8 @@ export default Ember.Route.extend({
   },
   actions: {
     saveRental(params) {
-      console.log("it work");
       var newRental = this.store.createRecord('rental', params);
-      console.log(params);
       var city = params.city;
-      console.log(city);
       city.get('rentals').addObject(newRental);
       newRental.save().then(function() {
         return city.save();
